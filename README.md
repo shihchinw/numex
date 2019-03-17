@@ -4,12 +4,12 @@ Numex is a playground to test and experiment numerical algorithms. With the help
 
 # Environment Setup
 
-1. Install [Visual Studio Code](https://code.visualstudio.com/) and extensions as below
-    1. [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-    2. [Jupyter](https://marketplace.visualstudio.com/items?itemName=donjayamanne.jupyter)
-2. [conda](https://conda.io/docs/user-guide/install/index.html)
+1. Install [Visual Studio Code](https://code.visualstudio.com/) and [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) extension.
+2. Install [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation), then create and activate a conda environment:
     ```
-    conda create --name numex
+    conda create --name numex python=3.7
     conda install scipy matplotlib jupyter
     conda activate numex
     ```
+3. Then open a script in exercises folder, just hit `Run Cell` or `Run All Cells` to play with:
+![VS Code with Python extension](vscode_with_python_extension.png)
