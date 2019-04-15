@@ -1,4 +1,5 @@
-# Scattered data interpolation.
+#%% [markdown]
+# # Scattered data interpolation.
 # http://shihchinw.github.io/2018/10/data-interpolation-with-radial-basis-functions-rbfs.html
 #%%
 import numpy as np
@@ -43,7 +44,8 @@ plt.show()
 
 #%%
 class RBF(object):
-    """1D RBF interpolant."""
+    """1D RBF interpolant.
+    """
 
     def __init__(self, centers, values, kernel, poly_deg=None, reg=0.0):
         """
@@ -118,7 +120,8 @@ class RBF(object):
         return M.dot(coeffs)
 
     def plot(self, segment_num=50, hide_ticks=False):
-        """Plot interpolation result as 1D curve."""
+        """Plot interpolation result as 1D curve.
+        """
         xdata = np.linspace(0.0, 1.0, segment_num, endpoint=True)
         ydata = self.evaluate(xdata)
         plt.ylim(0.0, 1.0)
@@ -129,7 +132,8 @@ class RBF(object):
         plt.plot(self.centers, self.values, 'o', color='#539798')
 
     def plot_basis(self, segment_num=50):
-        """Plot all basis functions and the composed result."""
+        """Plot all basis functions and the composed result.
+        """
         # prop_cycle = plt.rcParams['axes.prop_cycle']
         # colors = prop_cycle.by_key()['color']
         colors = plt.cm.Paired(np.arange(len(self.centers) + 1))
